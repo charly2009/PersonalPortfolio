@@ -1,0 +1,13 @@
+from django.conf.urls.static import static
+
+from django.urls import path
+
+from .import views
+
+
+urlpatterns = [
+
+
+    path('', views.allblog, name='allblog'),
+    path('<int:blog_id>/', views.detail, name= 'detail'), # look for into blog_id
+]
