@@ -3,5 +3,5 @@ from .models import Job # grab the model created in models and put it in diction
 
 # Create your views here.
 def home(request):
-    jobs = Job.objects
+    jobs = Job.objects.all
     return render(request, 'job/home.html', {'jobs': jobs})
