@@ -1,0 +1,331 @@
+.prevbutton{
+    float: left;
+    margin-top: 10px;
+    position: absolute;
+}
+.prevbutton ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+.prevbutton ul li  {
+    list-style: none;
+    text-align: center;
+    margin-left: 10px;
+    padding: 5px ;
+    height: 50px;
+    width: 130px;
+    background: #212529;
+    border-radius: 50px;
+    border: 5px solid #fff;
+}
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+.pb-cmnt-container {
+        font-family: Lato;
+        margin-top: 100px;
+    }
+
+.pb-cmnt-textarea {
+        resize: none;
+        padding: 20px;
+        height: 130px;
+        width: 100%;
+        border: 1px solid #F2F2F2;
+    }
+    /**/
+.title-date{
+    margin-left: 350px;
+}
+.share{
+      background: wheat;
+        width: 250px;
+        height: 60px;
+        border-radius: 40px;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: 1.8s ease;
+        cursor: pointer;
+        border: 2px solid #fff;
+        font-size: 24px;
+        margin-left: 30px;
+      }
+.share:hover{
+        transform: scale(1.1);
+      }
+.share span{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        color: #111;
+        line-height: 80px;
+        transition: .6s linear;
+        border-radius: 40px;
+        text-align: center;
+        z-index: 999;
+      }
+.share:hover span{
+        transform: rotateX(90deg);
+        transition-delay: .3s;
+        margin-bottom: 50%;
+      }
+.share a {
+        flex: 1;
+        font-size: 26px;
+        color: #fff;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: 0.3s linear;
+      }
+.share a:last-child{
+    margin-left: 5px;
+}
+.share:hover a {
+        opacity: 1;
+        transform: translateX(0);
+      }
+a:nth-of-type(1){
+        transition-delay: 1s;
+      }
+a:nth-of-type(2){
+        transition-delay: 0.8s;
+      }
+a:nth-of-type(3){
+        transition-delay: 0.6s;
+      }
+a:nth-of-type(4){
+        transition-delay: 0.4s;
+      }
+.fa-linkedin{
+        transition: 0.5s ease-in;
+
+      }
+.fa-linkedin:hover{
+        color: #0e76a8;
+        transform: scale(1.5);
+      }
+/*.fa-google{
+        transition: 0.5s ease-in;
+      }
+.fa-google:hover{
+        color: #3cba54;
+        transform: scale(1.5);
+      }
+.fa-twitter{
+        transition: 0.5s ease-in;
+      }
+.fa-twitter:hover{
+         color: deepskyblue;
+        transform: scale(1.5);
+      }
+.fa-youtube{
+         transition: 0.5s ease-in;
+      }
+.fa-youtube:hover{
+         color: RED;
+        transform: scale(1.5);
+      }*/
+.fa-instagram{
+        transition: 0.5s ease-in;
+      }
+.fa-instagram:hover{
+         color: #405DE6;
+        transform: scale(1.5);
+      }
+
+.fa-facebook{
+        transition: 0.5s ease-in;
+      }
+.fa-facebook:hover{
+         color: dodgerblue;
+        transform: scale(1.5);
+      }
+
+
+@media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+
+      }
+@media (max-width: 768px) {
+
+        .thumbs,.main-image {
+          display: none;
+        }
+        .title, .date{
+          margin-left: -330px;
+          text-align: center;
+        }
+       .body{
+         text-align: center;
+         margin-left: 120px;
+       }
+       .video{
+         margin-left: -8px;
+       }
+       .prevbutton{
+            display: none;
+        }
+      }
+
+      ul {
+  margin-left: 30%;
+  text-align: center;
+  padding: 0;
+  display: flex;
+}
+   .loading {
+    list-style-type: none;
+  font-size: 40px;
+  letter-spacing: 20px;
+  animation: loader 6s linear infinite
+  }
+  @keyframes loader {
+  0% {
+    color: red;
+    transform: translateX(-50px);
+    letter-spacing: 20px;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    letter-spacing: -20px;
+    opacity: 1;
+  }
+
+  100% {
+    color: blue;
+    transform: translateX(50px);
+    letter-spacing: 20px;
+    opacity: 0;
+  }
+}
+
+   .anime {
+        position: relative;
+       
+      }
+    .typing {
+      
+      z-index: -1; /*so the animation will work*/
+    color: #000000;
+    font-family: 'Playball', cursive;
+    font-size: 17px;
+    opacity: 1;
+    }
+    
+    .hiders {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+     
+    }
+    
+    .hiders p {
+      position: relative; 
+      clear: both; 
+      margin: 0;
+      float: right; /* makes animation go left-to-right */
+      width:0; /* graceful degradation: if animation doesn't work, these are invisible by default */
+      background: #fffafa; /* same as page background */
+      animation: typing 0.5s steps(30, end);
+      animation-fill-mode: both;  /* load first keyframe on page load, leave on last frame at end */
+    }
+      
+    .hiders p:nth-child(2) {
+      animation-delay: 2s;
+    }
+    .hiders p:nth-child(3) {
+      animation-delay: 4s;
+    }
+    .hiders p:nth-child(4) {
+      animation-delay: 6s;
+    }
+    .hiders p:nth-child(5) {
+      animation-delay: 8s;
+    }
+    .hiders p:nth-child(6) {
+      animation-delay: 10s;
+    }
+    @keyframes typing {
+      from { width: 100% }
+      to { width: 0 }
+      
+  }
+  
+  .corps {
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-decoration-line: none;
+ background-color: #212121;
+}
+
+.email{
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: verdana;
+  letter-spacing: 3px;
+  height: 60px;
+  margin-left: 35%;
+  width: 200px;
+  color: #FDC518;
+  position: relative;
+}
+/*to forcely remove line under the a tag*/
+a:link {
+  text-decoration: none;
+}
+a:hover{
+  color: #FDC518;
+}
+.email:before {
+  content: "";
+  position: absolute;
+  height: 75px;/*CHAGE THE HEIGHT OF  THE LINE*/
+  width: 200px;
+  top: -8px;
+  left: 0;
+  border-left: 2px solid red;
+  border-right: 2px solid #FDC518;
+  transition: all 01s;
+}
+.email:after {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 230px;
+  top: 0;
+  left: -15px;
+  border-top: 2px solid red;
+  border-bottom: 2px solid #FDC518;
+  transition: all 1s;
+}
+
+.email:hover:before {
+  transform: rotateY(180deg);
+}
+
+.email:hover:after {
+  transform: rotateX(180deg);
+}
+ 
